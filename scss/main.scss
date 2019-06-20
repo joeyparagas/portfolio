@@ -1,0 +1,353 @@
+@import "config";
+@import "utilities";
+@import "item_grid";
+@import "skills";
+@import "modal";
+
+// General Style and Rest
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font;
+  line-height: 1.6;
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: $dark-color;
+}
+
+ul {
+  list-style: none;
+}
+
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+  font-family: $hfont;
+}
+
+img {
+  width: 100%;
+}
+
+// Logo
+#logo,
+#nav-logo {
+  width: 50px;
+  height: 50px;
+  padding-left: 1.5rem;
+  color: #fff;
+  // text-transform: uppercase;
+}
+
+#nav-logo {
+  display: none;
+}
+
+#navbar {
+  width: 100%;
+  z-index: 2;
+  height: 5.5rem;
+}
+
+.navfix {
+  position: fixed;
+}
+
+.navtop {
+  position: initial;
+  background: $bg-header no-repeat 50% 70% / cover;
+  height: 5.5rem;
+  border-bottom: 3px solid $main-color;
+}
+
+// Transparency nav setting
+.navbar-T {
+  opacity: 0.9;
+  transition: all 1s;
+  background: $dark-color;
+  border-bottom: 3px solid $main-color;
+}
+
+// Main Nav
+#main-nav {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  top: 0;
+  justify-content: space-between;
+  padding-top: 1rem;
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    padding: 1rem 1.5rem;
+    position: relative;
+    z-index: 5;
+
+    // Dropdown Arrow
+    .nav-toggle::after {
+      display: inline-block;
+      margin-left: 0.255em;
+      // vertical-align: 0.255em;
+      content: "";
+      border-top: 0.3em solid;
+      border-right: 0.3em solid transparent;
+      border-bottom: 0;
+      border-left: 0.3em solid transparent;
+    }
+
+    .dropdown-toggle:empty::after {
+      margin-left: 0;
+    }
+
+    // dropdown menu text
+    .nav-toggle-menu {
+      position: absolute;
+      top: 90%;
+      left: -20px;
+      z-index: 1000;
+      // display: none;
+      float: left;
+      min-width: 10rem;
+      padding: 0.5rem 0;
+      margin: 0.125rem 0 0;
+      font-size: 1rem;
+      color: #212529;
+      text-align: center;
+      list-style: none;
+      background-color: #000;
+      opacity: 0.9;
+      background-clip: padding-box;
+      border: 1px solid $main-color;
+      border-radius: 5px;
+
+      .dropdown-item {
+        display: inline-block;
+      }
+
+      // Nav Menu link
+      a {
+        text-decoration: none;
+        color: #fff;
+        text-transform: uppercase;
+        padding-bottom: 0.5rem;
+      }
+      a:hover {
+        color: $main-color;
+      }
+    }
+  }
+
+  .nav-link,
+  .nav-toggle {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    border-bottom: 3px transparent solid;
+    padding-bottom: 0.5rem;
+    transition: border-color 0.5s;
+
+    // Underline color
+    &:hover {
+      border-color: $main-color;
+    }
+
+    &.current {
+      border-color: $main-color;
+    }
+  }
+}
+
+#header {
+  // Header Home
+  &-home {
+    background: $bg-image no-repeat center center/cover;
+    height: 100vh;
+    color: #fff;
+
+    // Header Content
+    .header-content {
+      text-align: center;
+      padding-top: 20%;
+      h2 {
+        letter-spacing: 4px;
+        a {
+          color: $domain-color1;
+        }
+      }
+      h1 {
+        font-size: 4rem;
+        line-height: 1.2;
+      }
+    }
+  }
+
+  &-inner {
+    position: relative;
+    z-index: 2000;
+    background: $bg-header no-repeat 50% 70% / cover;
+    height: 5.5rem;
+    border-bottom: 3px solid $main-color;
+  }
+}
+
+// Home Section
+#home {
+  // Section A: Specialize
+  &-a {
+    // Size and space
+    .specials {
+      margin-top: 3rem;
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: repeat(4, 1fr);
+
+      // icon colors and spacing
+      .fas {
+        color: $main-color;
+        padding: 0.4rem;
+      }
+    }
+  }
+
+  // Section B: Stats
+  &-b {
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      // Sizing and spacing
+      li {
+        line-height: 2;
+
+        &.stats-title {
+          font-size: 1.5rem;
+        }
+
+        &.stats-number {
+          font-size: 2rem;
+          font-weight: bold;
+        }
+      }
+
+      // Background colors
+      div {
+        padding: 3rem 0;
+        &:nth-child(odd) {
+          background: $light-color;
+        }
+        &:nth-child(even) {
+          background: $medium-color;
+        }
+      }
+    }
+  }
+
+  // Section C:
+  &-c {
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1.5rem;
+      text-align: center;
+
+      // process-step aka circle + superscript number
+      &-step {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 28px;
+        background: $main-color;
+        color: set-text-color($main-color);
+        border-radius: 50%;
+        height: 15px;
+        width: 15px;
+        line-height: 15px;
+        padding: 1rem;
+        transition: all 1s;
+      }
+
+      // process-icon aka large circle + icon
+      &-icon {
+        border-radius: 50%;
+        background: $dark-color;
+        color: set-text-color($dark-color);
+        padding: 2rem;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        text-align: center;
+        position: relative;
+        transition: all 1s;
+
+        // On hover, make larger and inverse colors
+        &:hover {
+          background: $main-color;
+          width: 90px;
+          height: 90px;
+          line-height: 90px;
+
+          .process-step {
+            background: $dark-color;
+            color: set-text-color($dark-color);
+          }
+        }
+      }
+    }
+  }
+}
+
+#portfolio {
+  .lead {
+    color: $main-color;
+    font-weight: 100;
+    background-color: $dark-color;
+    margin-bottom: 1rem;
+  }
+
+  .project-sub {
+    font-weight: 500;
+  }
+}
+
+// Footer
+#main-footer {
+  background: $dark-color;
+  position: relative;
+  color: #fff;
+  height: 5rem;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    height: 5rem;
+    align-items: center;
+
+    .social .fab {
+      margin-right: 1rem;
+      border: 2px #fff solid;
+      border-radius: 50%;
+      height: 20px;
+      width: 20px;
+      line-height: 20px;
+      text-align: center;
+      padding: 0.5rem;
+
+      &:hover {
+        background: $main-color;
+      }
+    }
+  }
+}
+
+// Import media queries
+@import "media";

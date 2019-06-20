@@ -1,0 +1,68 @@
+@import "config";
+@import "utilities";
+
+// Contact Form
+#contact {
+  position: relative;
+
+  &-a {
+    // Grid map
+    form {
+      padding-top: 2rem;
+    }
+    .text-fields {
+      display: grid;
+      grid-template-areas:
+        "name email"
+        "subject phone"
+        "message message";
+      grid-gap: 1.2rem;
+      margin-bottom: 1.2rem;
+
+      // Grid area
+      .name-input {
+        grid-area: name;
+      }
+      .email-input {
+        grid-area: email;
+      }
+      .subject-input {
+        grid-area: subject;
+      }
+      .phone-input {
+        grid-area: phone;
+      }
+      .message-input {
+        grid-area: message;
+        height: 150px;
+      }
+      .text-input {
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        border: 1px solid $medium-color;
+      }
+      .text-input:focus {
+        outline: none;
+        border-color: $main-color;
+        background-color: $light-color;
+      }
+    }
+    button[type="submit"] {
+      width: 50%;
+      height: 50px;
+      margin-top: 2rem;
+    }
+  }
+
+  // Display Google Map
+  &-b {
+    .contact-map {
+      display: flex;
+
+      .map {
+        height: 500px;
+        flex: 1;
+      }
+    }
+  }
+}

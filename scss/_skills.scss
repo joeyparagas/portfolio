@@ -1,0 +1,26 @@
+.skill-group {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 15px 0;
+
+  .skill {
+    height: 100px;
+  }
+  .skill img {
+    width: 100px;
+    height: 100px;
+    filter: grayscale(60%);
+    transition: filter 500ms;
+
+    &:hover {
+      filter: grayscale(0%);
+    }
+  }
+}
+
+// Tablets
+@media (max-width: 800px) {
+  .skill-group {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

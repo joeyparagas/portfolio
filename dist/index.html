@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="A display of projects created by Joey Paragas; a web developer, graphic designer and motion graphics creator."
+    />
+    <meta
+      name="keywords"
+      content="Joey Paragas, Paragas, web developer, graphic designer, motion graphics, portfolio"
+    />
+    <script src="https://kit.fontawesome.com/7b703b2c3b.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald:400,500|Roboto:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>
+      Joey Paragas | Portfolio: Web Development, Graphic Design and Motion
+      Graphics
+    </title>
+  </head>
+
+  <body>
+    <input type="checkbox" class="nav-check" />
+    <!-- Hamburger + empty  -->
+    <div class="hamburger"><div></div></div>
+    <!-- Navigation -->
+    <div id="navbar" class="navfix">
+      <div class="nav-container">
+        <nav id="main-nav">
+          <img src="img/logo.png" alt="JoeyParagas.com" id="logo" />
+
+          <ul>
+            <li><a href="index.html#header-home" class="nav-link">Home</a></li>
+            <li class="nav-tab-main">
+              <div class="dropdown-nav">
+                <!-- <a href="#portfolio" class="nav-link nav-toggle">Portfolio</a> -->
+                <span class="nav-link nav-toggle">Portfolio</span>
+              </div>
+
+              <div class="nav-toggle-menu hide">
+                <a href="index.html#web-projects" class="dropdown-item"
+                  >Web Projects</a
+                >
+                <a
+                  href="index.html#motion-graphics-projects"
+                  class="dropdown-item"
+                  >Motion Graphics</a
+                >
+                <a
+                  href="index.html#graphic-design-projects"
+                  class="dropdown-item"
+                  >Graphic Design</a
+                >
+              </div>
+            </li>
+            <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li><a href="#" class="nav-link">Resume</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <header id="header-home">
+      <div class="container">
+        <div class="header-content">
+          <h2>
+            <span class="welcome_txt">Welcome to </span>
+            <a href="index.html">JoeyParagas.com</a>
+          </h2>
+          <h1>
+            I am a
+            <span
+              class="txt-type"
+              data-wait="3000"
+              data-words='["full-time designer.", "part-time gamer.", "life-time father.", "full-time developer.", "part-time lifter.", "life-time husband."]'
+            >
+            </span>
+          </h1>
+          <div>
+            <p class="lead">
+              Check out my portfolio:
+            </p>
+            <a href="#web-projects" class="btn-light">Web Projects</a>
+            <a href="#motion-graphics-projects" class="btn-light"
+              >Motion Graphics</a
+            >
+            <a href="#graphic-design-projects" class="btn-light"
+              >Graphic Design</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Section: Portfolio -->
+    <section id="portfolio" class="text-center py-2">
+      <div class="container">
+        <h2 class="section-title">Portfolio</h2>
+        <div class="bottom-line"></div>
+
+        <!-- Web Projects -->
+        <div id="web-projects">
+          <h3 class="lead project-sub">Web Projects</h3>
+
+          <div class="items">
+            <!-- Project Samples -->
+            <div class="item">
+              <div class="item-image">
+                <img src="img/items/item1.png" alt="Project 1" />
+              </div>
+              <div class="item-text">
+                <div class="item-text-wrap">
+                  <p class="item-text-category">Design</p>
+                  <h2 class="item-text-title">Great Gradients</h2>
+                </div>
+              </div>
+              <!-- Modal -->
+              <div id="wp-1-modal" class="modal-bg hide">
+                <div class="modal-content">
+                  <header>
+                    <h1>Web Projects 1</h1>
+                    <span class="modal-close">&times;</span>
+                  </header>
+                  <!-- Modal Body -->
+                  <div class="container">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Nulla, explicabo.
+                    </p>
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Aut, cum.
+                    </p>
+                  </div>
+                  <footer>Footer</footer>
+                </div>
+              </div>
+              <!-- End Modal -->
+            </div>
+
+            <div class="item">
+              <div class="item-image ">
+                <img src="img/items/item2.png" alt="Project 2" />
+              </div>
+              <div class="item-text">
+                <div class="item-text-wrap">
+                  <p class="item-text-category">UI/UX</p>
+                  <h2 class="item-text-title">World Experience</h2>
+                </div>
+              </div>
+              <!-- Modal -->
+              <div id="wp-2-modal" class="modal-bg hide">
+                <div class="modal-content">
+                  <header>
+                    <h1>Web Projects 2</h1>
+                    <span class="modal-close">&times;</span>
+                  </header>
+                  <!-- Modal Body -->
+                  <div class="container">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Nulla, explicabo.
+                    </p>
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Aut, cum.
+                    </p>
+                  </div>
+                  <footer>Footer</footer>
+                </div>
+              </div>
+              <!-- End Modal -->
+            </div>
+
+            <div class="item">
+              <div class="item-image">
+                <img src="img/items/item3.png" alt="Project 1" />
+              </div>
+              <div class="item-text">
+                <div class="item-text-wrap">
+                  <p class="item-text-category">Photography</p>
+                  <h2 class="item-text-title">Still Shots</h2>
+                </div>
+              </div>
+              <!-- Modal -->
+              <div id="wp-3-modal" class="modal-bg hide">
+                <div class="modal-content">
+                  <header>
+                    <h1>Web Projects 3</h1>
+                    <span class="modal-close">&times;</span>
+                  </header>
+                  <!-- Modal Body -->
+                  <div class="container">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Nulla, explicabo.
+                    </p>
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Aut, cum.
+                    </p>
+                  </div>
+                  <footer>Footer</footer>
+                </div>
+              </div>
+              <!-- End Modal -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Motion Graphics Projects -->
+        <div id="motion-graphics-projects">
+          <h3 class="lead project-sub">Motion Graphics</h3>
+          <div class="items">
+            <!-- Project Samples -->
+            <div class="item">
+              <div class="item-image">
+                <img src="img/items/item1.png" alt="Project 1" />
+              </div>
+              <div class="item-text">
+                <div class="item-text-wrap">
+                  <p class="item-text-category">Design</p>
+                  <h2 class="item-text-title">Great Gradients</h2>
+                </div>
+              </div>
+              <!-- Modal -->
+              <div id="mg-1-modal" class="modal-bg hide">
+                <div class="modal-content">
+                  <header>
+                    <h1>Motion Graphics 1</h1>
+                    <span class="modal-close">&times;</span>
+                  </header>
+                  <!-- Modal Body -->
+                  <div class="container">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Nulla, explicabo.
+                    </p>
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Aut, cum.
+                    </p>
+                  </div>
+                  <footer>Footer</footer>
+                </div>
+              </div>
+              <!-- End Modal -->
+            </div>
+
+            <div class="item">
+              <div class="item-image">
+                <img src="img/items/item2.png" alt="Project 1" />
+              </div>
+              <div class="item-text">
+                <div class="item-text-wrap">
+                  <p class="item-text-category">UI/UX</p>
+                  <h2 class="item-text-title">World Experience</h2>
+                </div>
+              </div>
+              <!-- Modal -->
+              <div id="mg-2-modal" class="modal-bg hide">
+                <div class="modal-content">
+                  <header>
+                    <h1>Motion Graphics 2</h1>
+                    <span class="modal-close">&times;</span>
+                  </header>
+                  <!-- Modal Body -->
+                  <div class="container">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Nulla, explicabo.
+                    </p>
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Aut, cum.
+                    </p>
+                  </div>
+                  <footer>Footer</footer>
+                </div>
+              </div>
+              <!-- End Modal -->
+            </div>
+
+            <div class="item">
+              <div class="item-image">
+                <img src="img/items/item3.png" alt="Project 1" />
+              </div>
+              <div class="item-text">
+                <div class="item-text-wrap">
+                  <p class="item-text-category">Photography</p>
+                  <h2 class="item-text-title">Still Shots</h2>
+                </div>
+              </div>
+              <!-- Modal -->
+              <div id="mg-3-modal" class="modal-bg hide">
+                <div class="modal-content">
+                  <header>
+                    <h1>Motion Graphics 3</h1>
+                    <span class="modal-close">&times;</span>
+                  </header>
+                  <!-- Modal Body -->
+                  <div class="container">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Nulla, explicabo.
+                    </p>
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Aut, cum.
+                    </p>
+                  </div>
+                  <footer>Footer</footer>
+                </div>
+              </div>
+              <!-- End Modal -->
+            </div>
+          </div>
+        
+
+        <!-- Graphic Design Projects -->
+        <div id="graphic-design-projects">
+          <h3 class="lead project-sub">Graphic Design</h3>
+          <div class="items">
+            <!-- Project Samples -->
+            <div class="item">
+              <div class="item-image">
+                <img src="img/items/item1.png" alt="Project 1" />
+              </div>
+              <div class="item-text">
+                <div class="item-text-wrap">
+                  <p class="item-text-category">Design</p>
+                  <h2 class="item-text-title">Great Gradients</h2>
+                </div>
+              </div>
+              <!-- Modal -->
+              <div id="gd-1-modal" class="modal-bg hide">
+                <div class="modal-content">
+                  <header>
+                    <h1>Graphic Design 1</h1>
+                    <span class="modal-close">&times;</span>
+                  </header>
+                  <!-- Modal Body -->
+                  <div class="container">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Nulla, explicabo.
+                    </p>
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Aut, cum.
+                    </p>
+                  </div>
+                  <footer>Footer</footer>
+                </div>
+              </div>
+              <!-- End Modal -->
+            </div>
+
+            <div class="item">
+              <div class="item-image">
+                <img src="img/items/item2.png" alt="Project 1" />
+              </div>
+              <div class="item-text">
+                <div class="item-text-wrap">
+                  <p class="item-text-category">UI/UX</p>
+                  <h2 class="item-text-title">World Experience</h2>
+                </div>
+              </div>
+              <!-- Modal -->
+              <div id="gd-2-modal" class="modal-bg hide">
+                <div class="modal-content">
+                  <header>
+                    <h1>Graphic Design 2</h1>
+                    <span class="modal-close">&times;</span>
+                  </header>
+                  <!-- Modal Body -->
+                  <div class="container">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Nulla, explicabo.
+                    </p>
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Aut, cum.
+                    </p>
+                  </div>
+                  <footer>Footer</footer>
+                </div>
+              </div>
+              <!-- End Modal -->
+            </div>
+
+            <div class="item">
+              <div class="item-image">
+                <img src="img/items/item3.png" alt="Project 1" />
+              </div>
+              <div class="item-text">
+                <div class="item-text-wrap">
+                  <p class="item-text-category">Photography</p>
+                  <h2 class="item-text-title">Still Shots</h2>
+                </div>
+              </div>
+              <!-- Modal -->
+              <div id="gd-3-modal" class="modal-bg hide">
+                <div class="modal-content">
+                  <header>
+                    <h1>Graphic Design 3</h1>
+                    <span class="modal-close">&times;</span>
+                  </header>
+                  <!-- Modal Body -->
+                  <div class="container">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Nulla, explicabo.
+                    </p>
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Aut, cum.
+                    </p>
+                  </div>
+                  <footer>Footer</footer>
+                </div>
+              </div>
+              <!-- End Modal -->
+            </div>
+
+            <!-- Insert More Items here -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Skills -->
+    <section id="skills" class="text-center py-2">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="bottom-line"></div>
+
+        <div class="skill-group">
+          <div class="skill">
+            <img src="./img/skills/html.svg" alt="html" />
+          </div>
+          <div class="skill"><img src="./img/skills/css.svg" alt="css" /></div>
+          <div class="skill">
+            <img src="./img/skills/javascript.svg" alt="javascript" />
+          </div>
+          <div class="skill">
+            <img src="./img/skills/jquery.svg" alt="jquery" />
+          </div>
+          <div class="skill">
+            <img src="./img/skills/node.svg" alt="nodeJS" />
+          </div>
+          <div class="skill">
+            <img src="./img/skills/bootstrap.svg" alt="bootstrap" />
+          </div>
+          <div class="skill">
+            <img src="./img/skills/wp.svg" alt="wordpress" />
+          </div>
+          <div class="skill">
+            <img src="./img/skills/ss.svg" alt="Square Space" />
+          </div>
+
+          <div class="skill">
+            <img src="./img/skills/adobeCC.svg" alt="Adobe Creative Cloud" />
+          </div>
+          <div class="skill">
+            <img src="./img/skills/adobePs.svg" alt="Photoshop" />
+          </div>
+          <div class="skill">
+            <img src="./img/skills/adobeAi.svg" alt="Illustrator" />
+          </div>
+          <div class="skill">
+            <img src="./img/skills/adobeId.svg" alt="InDesign" />
+          </div>
+          <div class="skill">
+            <img src="./img/skills/adobeBr.svg" alt="Bridge" />
+          </div>
+          <div class="skill">
+            <img src="./img/skills/adobePr.svg" alt="Premier" />
+          </div>
+          <div class="skill">
+            <img src="./img/skills/adobeAe.svg" alt="After Effects" />
+          </div>
+          <div class="skill">
+            <img src="./img/skills/adobeAcrobat.svg" alt="Acrobat" />
+          </div>
+
+          <div class="skill">
+            <img src="./img/skills/msOffice.svg" alt="MS Office" />
+          </div>
+          <div class="skill">
+            <img src="./img/skills/msOutlook.svg" alt="Outlook" />
+          </div>
+          <div class="skill">
+            <img src="./img/skills/msWord.svg" alt="Word" />
+          </div>
+          <div class="skill">
+            <img src="./img/skills/msExcel.svg" alt="Excel" />
+          </div>
+          <div class="skill">
+            <img src="./img/skills/msPower.svg" alt="Power Point" />
+          </div>
+          <div class="skill">
+            <img src="./img/skills/msPub.svg" alt="Publisher" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+      <div class="footer-content container">
+        <p>Copyright &copy; 2019. All Rights Reserved</p>
+        <div class="social">
+          <div class="fab fa-linkedin"></div>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/modal.js"></script>
+    <script src="./js/main.js"></script>
+
+    <script src="./js/typewriter.js"></script>
+  </body>
+</html>

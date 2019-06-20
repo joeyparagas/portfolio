@@ -1,0 +1,23 @@
+// Variables
+$website-width: 1280px;
+$main-color: #e8b600;
+$light-color: #f4f4f4;
+$medium-color: #ccc;
+$dark-color: #444;
+$domain-color1: #e8b600;
+$domain-color2: #e8b600;
+$bg-image: url("../img/showcase.jpg");
+$bg-imagesm: url("../img/showcase_sm.jpg");
+$bg-header: url("../img/header.jpg");
+
+$font: "Roboto", sans-serif;
+$hfont: "Oswald", sans-serif;
+
+// Set Text Color
+@function set-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
