@@ -1,0 +1,133 @@
+.container {
+  max-width: 1280px;
+  padding: 0 1.5rem;
+  margin: auto;
+  overflow: hidden; }
+
+.nav-container {
+  max-width: 1280px;
+  padding: 0 1.5rem;
+  margin: auto; }
+
+.nav-check {
+  opacity: 0; }
+
+.btn-main, .btn-light, .btn-dark {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin: 0 0.25rem;
+  transition: all 0.5s;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px; }
+
+.btn-main {
+  color: #333;
+  background-color: #e8b600; }
+
+.btn-light {
+  color: #333;
+  background-color: #f4f4f4; }
+
+.btn-dark {
+  color: #f4f4f4;
+  background-color: #444; }
+
+button[class^="btn-"]:hover,
+a[class^="btn-"]:hover,
+input[class^="btn-"]:hover {
+  background-color: #e8b600; }
+
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 2rem; }
+
+.text-center {
+  text-align: center; }
+
+.main-color {
+  color: #e8b600; }
+
+.py-1 {
+  padding: 1rem 0; }
+
+.py-2 {
+  padding: 2rem 0; }
+
+.py-3 {
+  padding: 3rem 0; }
+
+.py-4 {
+  padding: 4rem 0; }
+
+.my-1 {
+  margin: 1rem 0; }
+
+.my-2 {
+  margin: 2rem 0; }
+
+.my-3 {
+  margin: 3rem 0; }
+
+.my-4 {
+  margin: 4rem 0; }
+
+.hide,
+.nav-check {
+  display: none; }
+
+.show {
+  display: block; }
+
+.section-title {
+  font-size: 2rem;
+  display: block;
+  text-align: center;
+  font-weight: 100;
+  text-transform: uppercase; }
+
+.bottom-line {
+  height: 2px;
+  width: 3rem;
+  background: #e8b600;
+  display: block;
+  margin: 0 auto 1rem auto; }
+
+#contact {
+  position: relative; }
+  #contact-a form {
+    padding-top: 2rem; }
+  #contact-a .text-fields {
+    display: grid;
+    grid-template-areas: "name email" "subject phone" "message message";
+    grid-gap: 1.2rem;
+    margin-bottom: 1.2rem; }
+    #contact-a .text-fields .name-input {
+      grid-area: name; }
+    #contact-a .text-fields .email-input {
+      grid-area: email; }
+    #contact-a .text-fields .subject-input {
+      grid-area: subject; }
+    #contact-a .text-fields .phone-input {
+      grid-area: phone; }
+    #contact-a .text-fields .message-input {
+      grid-area: message;
+      height: 150px; }
+    #contact-a .text-fields .text-input {
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc; }
+    #contact-a .text-fields .text-input:focus {
+      outline: none;
+      border-color: #e8b600;
+      background-color: #f4f4f4; }
+  #contact-a button[type="submit"] {
+    width: 50%;
+    height: 50px;
+    margin-top: 2rem; }
+  #contact-b .contact-map {
+    display: flex; }
+    #contact-b .contact-map .map {
+      height: 500px;
+      flex: 1; }

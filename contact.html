@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="A display of projects created by Joey Paragas; a web developer, graphic designer and motion graphics creator."
+    />
+    <meta
+      name="keywords"
+      content="Joey Paragas, Paragas, web developer, graphic designer, motion graphics, portfolio"
+    />
+    <script src="https://kit.fontawesome.com/7b703b2c3b.js"></script>
+    <!-- <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script> -->
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald:400,500|Roboto:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>
+      Contact Me | Portfolio: Web Development, Graphic Design and Motion
+      Graphics
+    </title>
+  </head>
+
+  <body>
+    <input type="checkbox" class="nav-check" />
+    <!-- Hamburger + empty  -->
+    <div class="hamburger"><div></div></div>
+    <!-- Navigation -->
+    <div id="navbar" class="navtop">
+      <div class="nav-container">
+        <nav id="main-nav">
+          <img src="img/logo.png" alt="JoeyParagas.com" id="logo" />
+
+          <ul>
+            <li><a href="index.html#header-home" class="nav-link">Home</a></li>
+            <li class="nav-tab-main">
+              <div class="dropdown-nav">
+                <!-- <a href="#portfolio" class="nav-link nav-toggle">Portfolio</a> -->
+                <span class="nav-link nav-toggle">Portfolio</span>
+              </div>
+
+              <div class="nav-toggle-menu hide">
+                <a href="index.html#web-projects" class="dropdown-item"
+                  >Web Projects</a
+                >
+                <a
+                  href="index.html#motion-graphics-projects"
+                  class="dropdown-item"
+                  >Motion Graphics</a
+                >
+                <a
+                  href="index.html#graphic-design-projects"
+                  class="dropdown-item"
+                  >Graphic Design</a
+                >
+              </div>
+            </li>
+            <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+            <li><a href="#" class="nav-link current">Contact</a></li>
+            <li><a href="#" class="nav-link">Resume</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Section: Contact -->
+    <section id="contact">
+      <!-- Section A: Form -->
+      <div id="contact-a" class="text-center py-3">
+        <div class="container">
+          <h2 class="section-title">Contact Me</h2>
+          <div class="bottom-line"></div>
+
+          <form method="POST" data-netlify="true" data-netlify-recaptcha="true">
+            <div class="text-fields">
+              <input
+                type="text"
+                class="text-input name-input"
+                placeholder="Name"
+                name="name"
+              />
+              <input
+                type="text"
+                class="text-input subject-input"
+                placeholder="Subject"
+                name="subject"
+              />
+              <input
+                type="email"
+                class="text-input emial-input"
+                placeholder="Email Address"
+                name="email"
+              />
+              <input
+                type="text"
+                class="text-input phone-input"
+                placeholder="Phone Number"
+                name="phone"
+              />
+              <textarea
+                type="text"
+                class="text-input message-input"
+                placeholder="Enter Message"
+                name="message"
+              ></textarea>
+              <div class="my-2"><div data-netlify-recaptcha="true"></div></div>
+            </div>
+            <button type="submit" class="btn-dark">Submit</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Section B: Google Map API -->
+      <div id="contact-b">
+        <div class="contact-map">
+          <div class="map"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+      <div class="footer-content container">
+        <p>Copyright &copy; 2019. All Rights Reserved</p>
+        <div class="social">
+          <div class="fab fa-linkedin"></div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Map.js file -->
+    <script src="./js/main.js"></script>
+    <script src="./js/map.js"></script>
+    <!-- Google Maps -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAK4naAuPxzDepRMxZ4fVl-sTjgAnQgtk0&callback=initMap"
+      async
+      defer
+    ></script>
+  </body>
+</html>
