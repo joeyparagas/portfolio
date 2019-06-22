@@ -237,6 +237,10 @@ input[class^="btn-"]:hover {
       .modal-bg .modal-content .modal-body .modal-text2 {
         text-align: center;
         padding: 0 4rem 2rem 4rem; }
+        .modal-bg .modal-content .modal-body .modal-text2 a {
+          font-weight: 700; }
+        .modal-bg .modal-content .modal-body .modal-text2 a:hover {
+          color: #e8b600; }
   .modal-bg header {
     background: #e8b600;
     display: flex;
