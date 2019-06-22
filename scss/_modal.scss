@@ -64,6 +64,14 @@
       .modal-text2 {
         text-align: center;
         padding: 0 4rem 2rem 4rem;
+
+        a {
+          font-weight: 700;
+        }
+
+        a:hover {
+          color: $main-color;
+        }
       }
     }
   }
