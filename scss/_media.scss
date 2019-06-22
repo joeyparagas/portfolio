@@ -29,7 +29,16 @@
 
   // Portfolio: Stack Grid Columns
   .items {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .modal-bg .modal-content .modal-body {
+    .modal-link {
+      margin-left: 0;
+    }
+    .modal-text {
+      margin-right: 0;
+    }
   }
 }
 
@@ -223,6 +232,15 @@
 
       .container {
         height: 100%;
+      }
+    }
+
+    .modal-bg .modal-content .modal-body {
+      .modal-link {
+        margin-left: 0;
+      }
+      .modal-text {
+        margin-right: 0;
       }
     }
   }

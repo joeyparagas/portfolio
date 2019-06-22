@@ -168,10 +168,6 @@ input[class^="btn-"]:hover {
     opacity: 0.7;
     margin: 0; }
 
-#web-projects,
-#motion-graphics-projects {
-  padding-bottom: 3rem; }
-
 .skill-group {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
@@ -192,7 +188,7 @@ input[class^="btn-"]:hover {
 
 .modal-bg {
   z-index: 3;
-  padding-top: 150px;
+  padding-top: 50px;
   position: fixed;
   left: 0;
   top: 0;
@@ -208,8 +204,39 @@ input[class^="btn-"]:hover {
     position: relative;
     padding: 0;
     outline: 0;
-    border-radius: 5px;
-    border-color: pink; }
+    border-radius: 5px; }
+    .modal-bg .modal-content .modal-body {
+      display: grid;
+      grid-template-columns: 2fr auto;
+      max-height: calc(100vh - 210px);
+      overflow-y: auto; }
+      .modal-bg .modal-content .modal-body .modal-img,
+      .modal-bg .modal-content .modal-body .modal-vid-container {
+        grid-column: 1 / span 2;
+        padding: 1rem; }
+      .modal-bg .modal-content .modal-body .modal-vid {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%;
+        height: 0; }
+      .modal-bg .modal-content .modal-body .modal-vid iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; }
+      .modal-bg .modal-content .modal-body .modal-link {
+        grid-column: 1 / span 1;
+        padding: 1rem;
+        margin-left: 10rem; }
+      .modal-bg .modal-content .modal-body .modal-text {
+        text-align: left;
+        padding-bottom: 1rem;
+        padding-right: 1rem;
+        margin-right: 10rem; }
+      .modal-bg .modal-content .modal-body .modal-text2 {
+        text-align: center;
+        padding: 0 4rem 2rem 4rem; }
   .modal-bg header {
     background: #e8b600;
     display: flex;
@@ -490,7 +517,11 @@ img {
       #header-home .header-content .lead {
         margin-top: 1rem; }
   .items {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(3, 1fr); }
+  .modal-bg .modal-content .modal-body .modal-link {
+    margin-left: 0; }
+  .modal-bg .modal-content .modal-body .modal-text {
+    margin-right: 0; } }
 
 @media (max-width: 500px) {
   #logo {
@@ -614,6 +645,10 @@ img {
         border-radius: 0; }
       .modal-bg .modal-content .container {
         height: 100%; }
+    .modal-bg .modal-bg .modal-content .modal-body .modal-link {
+      margin-left: 0; }
+    .modal-bg .modal-bg .modal-content .modal-body .modal-text {
+      margin-right: 0; }
   .skill-group {
     grid-template-columns: repeat(2, 1fr); }
   #contact .text-fields {
