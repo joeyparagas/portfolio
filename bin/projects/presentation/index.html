@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://kit.fontawesome.com/7b703b2c3b.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Slideshow Presentation</title>
+  </head>
+  <body>
+    <!-- Page 1: Intro -->
+    <section id="page-1" class="page">
+      <h1>Welcome to My Presentation</h1>
+      <p>
+        In this project, I utilized the use of CSS animations, variables and a
+        little bit of jQuery for smooth scrolling. The project mimics a simple
+        slide or PowerPoint presentation. Please check out my other projects at
+        <a href="http://joeyparagas.com" target="_blank">JoeyParagas.com</a>
+      </p>
+      <div>
+        <a href="#page-2" class="btn">
+          Next Page <i class="fas fa-arrow-circle-down"></i
+        ></a>
+      </div>
+    </section>
+
+    <!-- Page 2 -->
+    <section id="page-2" class="page">
+      <h1>Topic Heading</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ratione
+        ipsam, dolorem quaerat iste similique ex cumque quibusdam deserunt
+        assumenda deleniti voluptatum reiciendis veritatis sint consequuntur
+        ipsa temporibus vitae eveniet nam perspiciatis ipsum consequatur magni
+        eaque! Consequuntur, molestiae. Minima, dolor?
+      </p>
+      <div>
+        <a href="#page-1" class="btn btn-dark">
+          Previous Page <i class="fas fa-arrow-circle-up"></i
+        ></a>
+        <a href="#page-v" class="btn">
+          Next Page <i class="fas fa-arrow-circle-down"></i
+        ></a>
+      </div>
+    </section>
+
+    <!-- Video -->
+    <section id="page-v" class="page">
+      <h1>Embedded Video From YouTube</h1>
+      <p>
+        One of my After Effects projects I created. A promotional video using
+        different transitions and effects but chose not to insert audio as it
+        would be playing in a loop with other promotions in various offces.
+      </p>
+        <iframe
+          width="800"
+          height="450"
+          src="https://www.youtube.com/embed/AH9w1lxRQC0"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope;  picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>  
+      <div>
+        <a href="#page-2" class="btn btn-dark">
+          Previous Page <i class="fas fa-arrow-circle-up"></i
+        ></a>
+        <a href="#page-3" class="btn">
+          Next Page <i class="fas fa-arrow-circle-down"></i
+        ></a>
+      </div>
+    </section>
+
+    <!-- Page 3 -->
+    <section id="page-3" class="page">
+      <div class="overlay">
+        <h1>Random Image Page Loader</h1>
+        <p>
+          This page consists of a random image loading as a background. Every
+          time you refresh the page, a new image will load into the background.
+          The image is also slightly darken via CSS.
+        </p>
+        <p>
+          <input
+            type="button"
+            class="btn-reload"
+            value="New Image"
+            onClick="document.location.reload(true)"
+          />
+        </p>
+        <div>
+          <a href="#page-v" class="btn btn-dark">
+            Previous Page <i class="fas fa-arrow-circle-up"></i
+          ></a>
+          <a href="#page-4" class="btn">
+            Next Page <i class="fas fa-arrow-circle-down"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Page 4 -->
+    <section id="page-4" class="page">
+      <h1>... And They Lived Happily Ever After</h1>
+      <p>
+        You are at the end of the presentation. Thank you for visiting. Please
+        click previous to go back one slide or you may start over by clicking
+        Back To Beginning. Don't forget to check out my other projects at
+        <a href="http://joeyparagas.com" target="_blank">JoeyParagas.com</a>
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+        reprehenderit officiis ex, ut rerum modi consequuntur suscipit dolorum
+        dignissimos tempore libero voluptatibus quo distinctio aspernatur non
+        sunt sapiente, excepturi id?
+      </p>
+      <div>
+        <a href="#page-3" class="btn btn-dark">
+          Previous Page <i class="fas fa-arrow-circle-up"></i
+        ></a>
+        <a href="#page-1" class="btn">
+          Back To Beginning <i class="fas fa-arrow-circle-down"></i
+        ></a>
+      </div>
+    </section>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // Smooth Scrolling
+      $(".btn").on("click", function(event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          const hash = this.hash;
+          $("html, body").animate(
+            {
+              scrollTop: $(hash).offset().top
+            },
+            800
+          );
+        }
+      });
+    </script>
+  </body>
+</html>

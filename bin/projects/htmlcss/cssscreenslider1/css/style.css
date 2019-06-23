@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  line-height: 1.6;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #000;
+}
+
+footer {
+  color: #eb090a;
+  text-align: center;
+  padding: 10px;
+}
+
+footer a {
+  color: #eb090a;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+#wrapper {
+  position: relative;
+  width: 100%;
+
+  /* viewport width - if you slice the browser to 100 sections, this will take 55 of them */
+  min-height: 55vw;
+  overflow: hidden;
+}
+
+.layer {
+  position: absolute;
+  width: 100vw;
+  min-height: 55vw;
+  overflow: hidden;
+}
+
+.layer .content-wrap {
+  position: absolute;
+  width: 100vw;
+  min-height: 55vw;
+}
+
+.layer .content-body {
+  /* modifies the text */
+  width: 25%;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  transform: translateY(-50%);
+  color: #fff;
+}
+
+.layer img {
+  position: absolute;
+  width: 50%; /* size of image: original 35%*/
+  top: 50%; /* pushed from top */
+  left: 50%; /* pushed from left */
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.layer h1 {
+  font-size: 3em;
+}
+
+.bottom {
+  background: #000;
+  z-index: 1;
+}
+
+.bottom .content-body {
+  right: 5%;
+}
+
+.bottom h1 {
+  color: #eb090a;
+}
+
+.top {
+  background: #eb090a;
+  color: #fff;
+  z-index: 2;
+  width: 50vw;
+}
+
+.top .content-body {
+  left: 5%;
+}
+
+.top h1 {
+  color: #000;
+}
+
+.handle {
+  position: absolute;
+  height: 100%;
+  display: block;
+  background-color: #fff;
+  width: 5px;
+  top: 0;
+  left: 50%; /* position of center of handle from left of screen*/
+  z-index: 3;
+}
+
+.skewed .handle {
+  transform-origin: top; /* origin rotation set to top  */
+
+  /* skews 30° and pushes line up off screen half way.*/
+  /* Translate function does NOT affect the transform-origin point */
+  /* This causes the origin to be the exact center of line */
+  transform: rotate(30deg) translateY(-50%);
+
+  /* pushes back down from translate */
+  /* Top attribute does affect the transform-origin and pushes that down 50% also */
+  /* this causes the exact center of the line and screen to be the rotation of axis */
+  top: 50%;
+
+  /* since origin is now center, line grows from the center of line and doesn't offset to the right*/
+  height: 200%;
+}
+
+.skewed .top {
+  /* skews the outer div for spiderman */
+  transform: skew(-30deg); /* creates the skew */
+
+  /* sets the top outer div window to beyond max width */
+  width: calc(50vw + 1000px);
+
+  /* pushes top outer div window to the left */
+  margin-left: -1000px;
+}
+
+.skewed .top .content-wrap {
+  /* re-adjusts the under layer image div to vertical skew of it's container */
+  transform: skew(30deg);
+  /* pushes spiderman image div layer back into view */
+  margin-left: 1000px;
+}
+
+/*media query to adjust for text size when smaller */
+@media (max-width: 768px) {
+  body {
+    font-size: 65%;
+    line-height: 1;
+  }
+  .layer h1 {
+    font-size: 2em;
+  }
+
+  .layer img {
+    width: 45%; /* size of image: original 35%*/
+  }
+}
