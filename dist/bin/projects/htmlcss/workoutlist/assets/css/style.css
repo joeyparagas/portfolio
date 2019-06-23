@@ -1,0 +1,95 @@
+body {
+  font-family: "Roboto", sans-serif;
+
+  /* Used UIgradients.com for bg color */
+  background: #005aa7; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #fffde4,
+    #005aa7
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #fffde4,
+    #005aa7
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+h1 {
+  background: #2980b9;
+  color: white;
+  margin: 0;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: normal;
+}
+input {
+  color: #2980b9;
+  font-size: 18px;
+  background-color: #f7f7f7;
+  width: 100%;
+  padding: 13px 13px 13px 20px;
+  /* added padding makes total size bigger than container*/
+  box-sizing: border-box; /* this forces sizes to container even with margin and padding */
+  border: 3px solid rgba(0, 0, 0, 0); /* this takes out that annoying border box set by browser for inputs */
+}
+input:focus {
+  /* this selector is when you click inside the input box */
+  background: white;
+  border: 3px solid #2980b9;
+  outline: none;
+}
+.fa-plus,
+.fa-minus {
+  float: right;
+}
+#plus {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  background: white;
+  height: 40px;
+  line-height: 40px;
+  /* this makes text in the middle since text line height is equal to li height*/
+  color: #666;
+}
+/* this grabs every even li tag */
+li:nth-child(2n) {
+  background: #f7f7f7;
+}
+/* set the trashcan icon properties */
+li span {
+  background: #e74c3c;
+  height: 40px;
+  margin-right: 20px;
+  text-align: center;
+  color: white;
+  width: 0;
+  display: inline-block;
+  opacity: 0; /* this still shows even if span is hidden hence opacity is 0 */
+}
+/* animate the trash cans */
+/* notice: hover over the entire li tag and set the span properties */
+li:hover span {
+  opacity: 1; /* change opacity to 1 when reappear */
+  width: 40px;
+  /* transition-duration: 300ms;  this was my initial guess setting prior to video answer */
+  transition: 0.2s linear;
+  /* linear deals with easing*/
+}
+#container {
+  width: 360px;
+  margin: 100px auto;
+  background: #f7f7f7;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+.completed {
+  color: grey;
+  text-decoration: line-through;
+}
