@@ -7,7 +7,7 @@ function getJokes(e) {
 
   xhr.open("GET", `http://api.icndb.com/jokes/random/${number}`, true);
 
-  xhr.onload = function() {
+  xhr.onload = function () {
     if (number <= 0) {
       document.querySelector(".jokes").innerHTML = "";
       document.querySelector(
@@ -19,14 +19,14 @@ function getJokes(e) {
         let output = "";
 
         if (response.type === "success") {
-          response.value.forEach(function(joke) {
+          response.value.forEach(function (joke) {
             output += `<li>${joke.joke}</li>`;
           });
         }
 
         document.querySelector(
           ".continue"
-        ).innerHTML = `<b>Continue to click on the button for different results.</b>`;
+        ).innerHTML = `<h5>Continue to click on the button for different results.</h5>`;
         document.querySelector(".jokes").innerHTML = output;
       }
     }
